@@ -1,0 +1,37 @@
+//Calculadora: Soma, subtração, multiplicação, divisão,
+//resto
+fun main(){
+    var n1 = 138.4
+    var n2 = 1094.20
+    var result: Double
+   	result = soma(n1,n2)
+    println("$n1 + $n2 = $result")
+    result = subtracao(n1,n2)
+    println("$n1 - $n2 = $result")
+    result = multiplicacao(n1,n2)
+    println("$n1 x $n2 = $result")
+    result = divisao(n1,n2)
+    println("$n1 / $n2 = $result")
+    result = resto(n1,n2)
+    println("$n1 % $n2 = $result")
+}
+
+fun soma (a:Double,b:Double):Double{
+    return(a+b)
+}
+
+fun subtracao(a:Double,b:Double):Double{
+    return(a-b)
+}
+
+fun multiplicacao(a:Double,b:Double):Double{
+    return(a*b)
+}
+
+fun divisao(a:Double,b:Double):Double{
+    return (a/b)
+}
+
+fun resto(a:Double,b:Double):Double{
+    return(a%b)
+}
