@@ -1,23 +1,23 @@
 //Jogo de JoKenPo (Pedra-Papel-Tesoura)
 fun main(){
-    val PC = (1..3).random()
+    val pc = (1..3).random()
     val eu = 1
     var resultado:String
     //1 = Pedra
     //2 = Papel
     //3 = Tesoura
     print("Adversário: ")
-    resultado = PPT(PC)
-    println("${resultado}")
+    resultado = PPT(pc)
+    println(resultado)
     print("Você: ")
     resultado = PPT(eu)
     println("${resultado} \n")
-    vencedor(PC,eu)
+    vencedor(pc,eu)
 
 }
 
 fun PPT(a:Int):String{
-    var b:String
+    val b:String
     when{
         a==1 -> b = "Pedra"
         a==2 -> b = "Papel"
@@ -26,18 +26,18 @@ fun PPT(a:Int):String{
     return b
 }
 
-fun vencedor(PC:Int,eu:Int){
-    if(PC==1 && eu==3){
+fun vencedor(pc:Int,eu:Int){
+    if(pc==1 && eu==3){
         println("Você perdeu!")
-    }else if(PC==1 && eu==2){
+    }else if(pc==1 && eu==2){
         println("Você ganhou!")
-    }else if(PC==2 && eu==3){
+    }else if(pc==2 && eu==3){
         println("Você ganhou!")
-    }else if(PC==2 && eu==1){
+    }else if(pc==2 && eu==1){
         println("Você perdeu!")
-    }else if(PC==3 && eu==2){
+    }else if(pc==3 && eu==2){
         println("Você perdeu!")
-    }else if(PC==3 && eu==1){
+    }else if(pc==3 && eu==1){
         println("Você ganhou!")
     }else{
         println("Empate!")
